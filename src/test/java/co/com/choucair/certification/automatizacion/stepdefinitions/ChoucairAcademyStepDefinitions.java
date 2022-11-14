@@ -26,12 +26,12 @@ public class ChoucairAcademyStepDefinitions {
     public void youWantToCreateAnUserInUtestPage() throws Exception {
         OnStage.theActorCalled("User").wasAbleTo(Launch.utestHomepage());
     }
-    @Then("^go to the botton join today$")
-    public void goToTheBottonJoinToday() throws Exception {
+    @Then("^go to the button join today$")
+    public void goToTheButtonJoinToday() throws Exception {
         OnStage.theActorCalled("User").wasAbleTo(Go.joinToday());
     }
-    @When("^enters your personal information$")
-    public void entersYourPersonalInformation(List<DataPersonalUser> data) throws Exception {
+    @When("^entes your personal information$")
+    public void entesYourPersonalInformation(List<DataPersonalUser> data) throws Exception {
         OnStage.theActorInTheSpotlight().attemptsTo(EnterUserData.information(
                 data.get(0).getFistName(),
                 data.get(0).getLastName(),
