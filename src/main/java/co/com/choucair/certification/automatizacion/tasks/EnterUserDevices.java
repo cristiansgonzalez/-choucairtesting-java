@@ -11,29 +11,45 @@ import org.openqa.selenium.Keys;
 
 public class EnterUserDevices implements Task {
 
-    public static Performable information() {
-        return Tasks.instrumented(EnterUserDevices.class);
+    private String sOComputer;
+    private String version;
+    private String languague;
+    private String mobile;
+    private String modelo;
+    private String sysOp;
+
+    public EnterUserDevices(String sOComputer, String version, String languague, String mobile, String modelo, String sysOp) {
+        this.sOComputer = sOComputer;
+        this.version = version;
+        this.languague = languague;
+        this.mobile = mobile;
+        this.modelo = modelo;
+        this.sysOp = sysOp;
+    }
+
+    public static Performable information(String sOComputer, String version, String languague, String mobile, String modelo, String sysOp) {
+        return Tasks.instrumented(EnterUserDevices.class, sOComputer, version, languague, mobile, modelo, sysOp);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Click.on(InformationUserDevices.COMPUTER_1),
-                Enter.theValue("Windows").into(InformationUserDevices.COMPUTER_2),
+                Enter.theValue(sOComputer).into(InformationUserDevices.COMPUTER_2),
                 Enter.keyValues(Keys.ENTER).into(InformationUserDevices.COMPUTER_2),
                 Click.on(InformationUserDevices.VERSION_1),
-                Enter.theValue("Windows 10").into(InformationUserDevices.VERSION_2),
+                Enter.theValue(version).into(InformationUserDevices.VERSION_2),
                 Enter.keyValues(Keys.ENTER).into(InformationUserDevices.VERSION_2),
                 Click.on(InformationUserDevices.LANGUAGUE_1),
-                Enter.theValue("Spanish").into(InformationUserDevices.LANGUAGUE_2),
+                Enter.theValue(languague).into(InformationUserDevices.LANGUAGUE_2),
                 Enter.keyValues(Keys.ENTER).into(InformationUserDevices.LANGUAGUE_2),
                 Click.on(InformationUserDevices.MOBILE_1),
-                Enter.theValue("Apple").into(InformationUserDevices.MOBILE_2),
+                Enter.theValue(mobile).into(InformationUserDevices.MOBILE_2),
                 Enter.keyValues(Keys.ENTER).into(InformationUserDevices.MOBILE_2),
                 Click.on(InformationUserDevices.MODEL_1),
-                Enter.theValue("iPhone 14 Pro Max").into(InformationUserDevices.MODEL_2),
+                Enter.theValue(modelo).into(InformationUserDevices.MODEL_2),
                 Enter.keyValues(Keys.ENTER).into(InformationUserDevices.MODEL_2),
                 Click.on(InformationUserDevices.OP_SYS_1),
-                Enter.theValue("iOS 16.1 Beta").into(InformationUserDevices.OP_SYS_2),
+                Enter.theValue(sysOp).into(InformationUserDevices.OP_SYS_2),
                 Enter.keyValues(Keys.ENTER).into(InformationUserDevices.OP_SYS_2),
                 Click.on(InformationUserDevices.NEXT)
                 );

@@ -1,9 +1,9 @@
 package co.com.choucair.certification.automatizacion.util;
 
-import co.com.choucair.certification.automatizacion.tasks.EnterPassword;
+import co.com.choucair.certification.automatizacion.tasks.CreatePassword;
 import java.security.SecureRandom;
 
-public class PasswordGeneration extends EnterPassword {
+public class PasswordGeneration extends CreatePassword {
 
     public static String passwordGeneration(int pdwLength){
 

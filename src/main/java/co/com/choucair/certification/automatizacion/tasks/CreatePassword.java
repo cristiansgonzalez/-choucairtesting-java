@@ -9,20 +9,17 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
-public class EnterPassword implements Task {
-    public static Performable information() {
-        return Tasks.instrumented(EnterPassword.class);
+public class CreatePassword implements Task {
+
+    public static Performable information(String password) {
+        return Tasks.instrumented(CreatePassword.class, password);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        String password = PasswordGeneration.passwordGeneration(60);
-        actor.attemptsTo(Enter.theValue(password).into(Password.PASSWORD),
-                Enter.theValue(password).into(Password.CONFIRM_PASSWORD),
-                Click.on(Password.STAY_INFORMED),
-                Click.on(Password.TERMS_USE),
-                Click.on(Password.PRIVACY),
-                Click.on(Password.CREATRE_USER)
+        String password2 = PasswordGeneration.passwordGeneration(60);
+        actor.attemptsTo(Enter.theValue(password2).into(Password.PASSWORD),
+                Enter.theValue(password2).into(Password.CONFIRM_PASSWORD)
                 );
     }
 }

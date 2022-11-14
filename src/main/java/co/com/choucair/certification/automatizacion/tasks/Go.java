@@ -1,6 +1,6 @@
 package co.com.choucair.certification.automatizacion.tasks;
 
-import co.com.choucair.certification.automatizacion.userinterface.SingUp;
+import co.com.choucair.certification.automatizacion.userinterface.SignUp;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
@@ -14,6 +14,6 @@ public class Go implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Click.on(SingUp.JOIN_TODAY_BUTTON));
+        actor.attemptsTo(Click.on(SignUp.JOIN_TODAY_BUTTON));
     }
 }

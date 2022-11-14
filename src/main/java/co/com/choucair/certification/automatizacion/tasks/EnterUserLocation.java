@@ -12,24 +12,33 @@ import net.thucydides.core.webdriver.jquery.ByJQuery;
 import org.openqa.selenium.Keys;
 
 public class EnterUserLocation implements Task {
+    private String city;
+    private String state;
+    private String postalCode;
+    private String country;
 
-    public static Performable information() {
-        return Tasks.instrumented(EnterUserLocation.class);
+    public EnterUserLocation(String city, String state, String postalCode, String country) {
+        this.city = city;
+        this.state = state;
+        this.postalCode = postalCode;
+        this.country = country;
+    }
+
+    public static Performable information(String city, String state, String postalCode, String country) {
+        return Tasks.instrumented(EnterUserLocation.class, city, state, postalCode, country);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Clear.field(InformationUserLocation.CITY),
-                Enter.theValue("Ibague Tolima").into(InformationUserLocation.CITY),
+                Enter.theValue(city + " " + state).into(InformationUserLocation.CITY),
                 Enter.keyValues(Keys.DOWN).into(InformationUserLocation.CITY),
                 Enter.keyValues(Keys.ENTER).into(InformationUserLocation.CITY),
-                Enter.theValue("730001").into(InformationUserLocation.POSTAL_CODE),
+                Enter.theValue(postalCode).into(InformationUserLocation.POSTAL_CODE),
                 Click.on(InformationUserLocation.COUNTRY_1),
-                Enter.theValue("Colombia").into(InformationUserLocation.COUNTRY_2),
+                Enter.theValue(country).into(InformationUserLocation.COUNTRY_2),
                 Enter.keyValues(Keys.ENTER).into(InformationUserLocation.COUNTRY_2),
                 Click.on(InformationUserLocation.NEXT)
-
         );
-
     }
 }
