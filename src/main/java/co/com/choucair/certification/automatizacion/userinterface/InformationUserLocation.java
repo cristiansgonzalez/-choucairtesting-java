@@ -1,10 +1,8 @@
 package co.com.choucair.certification.automatizacion.userinterface;
 
 import net.serenitybdd.core.pages.PageObject;
-import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
-
 
 public class InformationUserLocation extends PageObject {
     public static final Target CITY = Target.the("Ingresa La ciudad")

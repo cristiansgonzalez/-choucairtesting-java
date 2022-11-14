@@ -1,7 +1,6 @@
 package co.com.choucair.certification.automatizacion.tasks;
 
 import co.com.choucair.certification.automatizacion.userinterface.InformationUserData;
-import co.com.choucair.certification.automatizacion.userinterface.InformationUserDevices;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;

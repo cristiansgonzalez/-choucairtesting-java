@@ -14,7 +14,6 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class ChoucairAcademyStepDefinitions {
 

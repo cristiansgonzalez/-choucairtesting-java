@@ -1,14 +1,11 @@
 package co.com.choucair.certification.automatizacion.tasks;
 
-import co.com.choucair.certification.automatizacion.userinterface.InformationUserData;
 import co.com.choucair.certification.automatizacion.userinterface.InformationUserLocation;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.*;
-import net.serenitybdd.screenplay.actions.selectactions.SelectByVisibleTextFromBy;
-import net.thucydides.core.webdriver.jquery.ByJQuery;
 import org.openqa.selenium.Keys;
 
 public class EnterUserLocation implements Task {

@@ -1,6 +1,5 @@
 package co.com.choucair.certification.automatizacion.tasks;
 
-import co.com.choucair.certification.automatizacion.userinterface.Password;
 import co.com.choucair.certification.automatizacion.userinterface.TermsConditions;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
