@@ -8,7 +8,7 @@ Feature: Prueba tecnica Choucair
     Then go to the button join today
     When entes your personal information
     | fistName | lastName | email                        | day | moth | year | spoken  |
-    | Cristian | Gonzalez | cristian-saul-66@hotmail.com | 13  | 6    | 1991 | Spanish |
+    | Cristian | Gonzalez | alt.hl-2o4be6uw@yopmail.com | 13  | 6    | 1991 | Spanish |
     And enter your personal location
     | city   | state  | postalCode | country  |
     | Ibague | Tolima | 730001     | Colombia |
